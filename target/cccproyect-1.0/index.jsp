@@ -1,0 +1,69 @@
+<%-- 
+    Document   : index
+    Created on : 2 ene. 2024, 22:08:42
+    Author     : Admin
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        <link rel="stylesheet" href="estilos/estilos.css">
+        <title>Compañia de Circuitos Cerrados S.A.</title>
+    </head>
+
+    <body>
+        <header class="contenedor">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="img/LogoCCC.png" alt="logo">
+                </div>
+                <div class="titulo">
+                    <h1>RECIBO DE HABERES</h1>
+                </div>
+            </div>
+            <!-- CONTENEDOR DE TODO -->
+            <div class="contenedor_td">
+                <div class="caja_trasera">
+                    <div class="caja_tr_login">
+                        <h3>ACCEDER</h3>
+                        <!-- <p>Iniciar sesión</p> -->
+                        <button id="btn_ingresar">Login</button>
+                    </div>
+                    <div class="caja_tr_registro">
+                        <h3>REGISTRAR</h3>
+                        <!-- <p>Registrate</p> -->
+                        <button id="btn_registrarse">Registrarse</button>
+                    </div>
+                </div>
+                <!-- FORMULARIO DE LOGIN Y REGISTRO -->
+                <div class="contenedor_usuario">
+                    <!-- Login -->
+                    <form action="loginEmpleado" method="post" class="formulario_login" id="f_login">
+                        <h2>Iniciar Sesión</h2>
+                        <input type="text" placeholder="Legajo" name="legajo_login" id="legajo_login" class="form-control" required>
+                        <input type="password" placeholder="Contraseña" name="password_login" id="password_login" class="form-control" required>
+                        <button>Entrar</button>
+                    </form>
+                    <!-- Registro -->
+                    <form action="registroEmpleado" method="post" class="formulario_registro" id="f_registro">
+                        <h2>Registrarse</h2>
+                        <input type="text" placeholder="Nombre completo" name="nombre" id="nombre" class="form-control">
+                        <input type="text" placeholder="Documento" name="dni_registro" id="dni_registro" class="form-control">
+                        <input type="text" placeholder="Legajo" name="legajo_registro" id="legajo_registro" class="form-control">
+                        <input type="password" placeholder="Contraseña" name="password_registro" id="password_registro" class="form-control">
+                        <button>Registrarse</button>
+                    </form>
+                </div>
+            </div>
+            <!-- </main> -->
+        </header>
+        <script src="javascript/scriptsIndex.js"></script>
+        <!--        <script src="javascript/scriptsLogueado.js"></script>-->
+    </body>
+</html>

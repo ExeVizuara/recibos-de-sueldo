@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    min-height: 100vh;
+    text-align: center;
+    background: #175DA0;
+    padding: 10px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: -moz-linear-gradient(left, #175DA0 0%, #348BC4 40%, #348BC4 60%, #175DA0 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #175DA0), color-stop(40%, #348BC4), color-stop(60%, #348BC4), color-stop(100%, #175DA0));
+    background: -webkit-linear-gradient(left, #175DA0 0%, #348BC4 40%, #348BC4 60%, #175DA0 100%);
+    background: -o-linear-gradient(left, #175DA0 0%, #348BC4 40%, #348BC4 60%, #175DA0 100%);
+    background: -ms-linear-gradient(left, #175DA0 0%, #348BC4 40%, #348BC4 60%, #175DA0 100%);
+    background: linear-gradient(to right, #175DA0 0%, #348BC4 40%, #348BC4 60%, #175DA0 100%);
+    -webkit-box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.3);
+}
+
+.navbar{
+    display: flex;
+    background-color: #2b2c2e;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%; 
+    border-radius: 10px;
+}
+
+.navbar__login a{
+    display: flex;
+    align-self: flex-end;
+    text-decoration: none;
+}
+.logo img{
+    height: 75px;
+    width: auto;
+    /* border-width: 0cap; */
+}
+.navbar__login button{
+    align-self: flex-end;
+    /* margin-left: 150px; */
+    color: #000000;
+    padding: 12px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.titulo h1{
+    font-size: 45px;
+    color: #888b91;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+
+/* alineacion con flexbox */
+.contenedor{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenedor_td{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.caja_trasera{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex; 
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(43, 40, 29, 0.342);
+}
+
+.caja_trasera div{
+    margin: 100px 40px;
+    color: white;
+    transition: all 500ms;
+}
+
+.caja_trasera div p,
+.caja_trasera div button{
+    margin-top: 30px;
+}
+
+.caja_trasera div h3{
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.caja_trasera button{
+    padding: 10px 40px;
+    border: 2px solid;
+    border-color: #F2F2F2;
+    background: transparent;
+    color: #F2F2F2;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 12px;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    transition: all 300ms;
+}
+
+.caja_trasera button:hover{
+    background: rgba(255, 255, 255, 0.918);
+    color: black;
+}
+
+/* FORMULARIOS */
+.contenedor_usuario{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.contenedor_usuario form{
+    width: 100%;
+    padding: 80px 20px;
+    background: white;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.contenedor_usuario form h2{
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #171842;
+}
+
+.contenedor_usuario form input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+}
+
+.contenedor_usuario form button{
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    background: #175DA0;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.formulario_login{
+    opacity: 1;
+    display: block;
+}
+
+.formulario_registro{
+    display: none;
+}
+
+/* METODO RESPONSIVE DESING */
+
+@media screen and (max-width: 850px){
+    .contenedor_td{
+        margin-top: 50px;
+    }
+
+    .caja_trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+    .caja_trasera div{
+        margin: 0px;
+        position: absolute;
+    }
+
+    /* FORMULARIOS */
+    .contenedor_usuario{
+        top: -10px;
+        left: -5px;
+        margin: auto;    
+    }
+    .contenedor_usuario form{
+        position: relative;
+    }
+}
+
+/*.periodo {
+    display: block;
+    align-items: center;
+    justify-content: center
+}
+
+.container {
+    color:red;
+}*/
